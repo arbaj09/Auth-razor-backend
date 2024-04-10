@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import { School } from "./models/school.model.js";
-import { Student } from "./models/student.model.js";
-import Database_Connection from "./models/DB/index.js";
+import { School } from "./netlify/models/school.model.js";
+import { Student } from "./netlify/models/student.model.js";
+// import Database_Connection from "./netlify/functions/DB/index.js";
 
 dotenv.config({
     path: './.env'

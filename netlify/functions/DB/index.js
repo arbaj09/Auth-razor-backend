@@ -1,6 +1,7 @@
 
-import mongoose from "mongoose";
-import { MongoClient } from "mongodb";
+const mongoose = require('mongoose');
+
+const MongoClient = require('mongodb').MongoClient;
 
 const Database_Connection = async () => {
 

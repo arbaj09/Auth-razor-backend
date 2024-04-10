@@ -1,5 +1,5 @@
 
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 
 const schoolSchema = new mongoose.Schema({
