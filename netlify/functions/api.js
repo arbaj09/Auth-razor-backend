@@ -3,9 +3,13 @@ const serverless = require('serverless-http');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
-// const School  = require('./models/school.model.js');
-// const  Student  = require('./models/student.model.js');
+const {School}  = require('../models/school.model.js');
+const  {Student}  = require('../models/student.model.js');
 const Database_Connection = require('./DB/index.js');
+
+
+const router = express.Router();
+
 router.get('/', (req, res) => {
 res.send('App is running..');
 });
@@ -21,15 +25,17 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
-Database_Connection();
+
+
 ////Create School in DB
 
 
 router.get("/test", (req, res) => {
     res.send("test")
 })
+Database_Connection();
 
 router.post("/create-school", async (req, res) => {
     try {
@@ -123,6 +129,12 @@ router.post("/create-student", async (req, res) => {
 
 
 
+    
+    
+
+
+
+
 /// login student
 router.post("/student/login", async (req, res) => {
     try {
@@ -185,7 +197,7 @@ router.post("/school/login", async (req, res) => {
 
 
 
-
+ 
 
 
 

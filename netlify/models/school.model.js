@@ -42,7 +42,11 @@ const schoolSchema = new mongoose.Schema({
     }
     
 })
-export const  School=mongoose.model("School",schoolSchema)
+const School=mongoose.model("School",schoolSchema)
+module.exports = {
+    schoolSchema: schoolSchema,
+    School: School
+};
 
 
 
